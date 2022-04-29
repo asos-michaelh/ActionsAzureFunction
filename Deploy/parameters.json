@@ -1,0 +1,48 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "subscriptionId": {
+            "value": "01e15d22-5fcf-4c6a-9c9e-16e71928493b"
+        },
+        "name": {
+            "value": "ActionsAzureFunction"
+        },
+        "location": {
+            "value": "UK West"
+        },
+        "hostingPlanName": {
+            "value": "ASP-michaelhancocktraining-a12b"
+        },
+        "serverFarmResourceGroup": {
+            "value": "michael-hancock-training"
+        },
+        "alwaysOn": {
+            "value": false
+        },
+        "storageAccountName": {
+            "value": "michaelhancocktrainb3e1"
+        },
+        "sku": {
+            "value": "Dynamic"
+        },
+        "skuCode": {
+            "value": "Y1"
+        },
+        "workerSize": {
+            "value": "0"
+        },
+        "workerSizeId": {
+            "value": "0"
+        },
+        "numberOfWorkers": {
+            "value": "1"
+        },
+        "use32BitWorkerProcess": {
+            "value": true
+        },
+        "netFrameworkVersion": {
+            "value": "v6.0"
+        }
+    }
+}
