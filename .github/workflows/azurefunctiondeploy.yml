@@ -39,9 +39,9 @@ jobs:
              az deployment group create \
              --name az-func-workflow-deploy \
              --resource-group ${{ env.AZURE_RESOURCE_GROUP_NAME }} \
-             --template-file $GITHUB_WORKSPACE/ActionsAzureFunction/Deploy/template.json \
+             --template-file $GITHUB_WORKSPACE/Deploy/template.json \
              --mode incremental \
-             --parameters $GITHUB_WORKSPACE/ActionsAzureFunction/Deploy/parameters.json \
+             --parameters $GITHUB_WORKSPACE/Deploy/parameters.json \
  
     ############################################################################
 
