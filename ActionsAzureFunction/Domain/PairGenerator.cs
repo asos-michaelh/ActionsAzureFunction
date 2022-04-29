@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using ActionsAzureFunction.Model;
@@ -11,17 +11,17 @@ namespace ActionsAzureFunction.Domain
 
         public PairGenerator()
         {
-            var dateHash = DateTime.Now.ToShortDateString().GetHashCode(); 
-            
+            var dateHash = DateTime.Now.ToShortDateString().GetHashCode();
+
             rng = new Random(dateHash);
         }
 
         public List<(Person personOne, Person personTwo)> GetPairs(Team team)
         {
-            var teamMembersToPlace = team.teamMembers.Select(person => person.name).ToList();
+            var teamMembersToPlace = team.TeamMembers.Select(person => person.Name).ToList();
             var pairs = new List<(Person, Person)>();
 
-            do 
+            do
             {
                 (Person personOne, Person personTwo) newPair = new();
 
@@ -42,7 +42,7 @@ namespace ActionsAzureFunction.Domain
                 var personTwo = teamMembersToPlace[indexOfPersonTwo];
                 newPair.personTwo = new Person(personTwo);
                 teamMembersToPlace.RemoveAt(indexOfPersonTwo);
-                
+
                 pairs.Add(newPair);
             } while (teamMembersToPlace.Any());
 
