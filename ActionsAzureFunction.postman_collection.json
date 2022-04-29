@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "d44142f5-a5be-46ef-be87-f274a4e9249e",
+		"name": "ActionsAzureFunction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Pairs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"teamMembers\": [\r\n        {\r\n            \"name\": \"John\"\r\n        },\r\n        {\r\n            \"name\": \"Jim\"\r\n        }, \r\n        {\r\n            \"name\": \"Bob\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7071/api/get-pairs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7071",
+					"path": [
+						"api",
+						"get-pairs"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
