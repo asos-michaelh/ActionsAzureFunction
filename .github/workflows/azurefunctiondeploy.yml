@@ -8,7 +8,7 @@ env:
   DOTNET_VERSION: '3.1.x'
   AZURE_RESOURCE_GROUP_NAME: 'michael-hancock-training'
   AZURE_FUNCTIONAPP_NAME: 'get-pairs'
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: '${{ github.workspace }}\ActionsAzureFunction'
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: '${{ github.workspace }}/ActionsAzureFunction'
   BUILD_OUTPUT_PATH: '${{ github.workspace }}/build-artifacts'
   BUILD_PACKAGE_NAME: 'az-func.zip'
 
@@ -39,7 +39,7 @@ jobs:
              az deployment group create \
              --name az-func-workflow-deploy \
              --resource-group ${{ env.AZURE_RESOURCE_GROUP_NAME }} \
-             --template-file $GITHUB_WORKSPACE/ActionsAzureFunction/Deploy//template.json \
+             --template-file $GITHUB_WORKSPACE/ActionsAzureFunction/Deploy/template.json \
              --mode incremental \
              --parameters $GITHUB_WORKSPACE/ActionsAzureFunction/Deploy/parameters.json \
  
